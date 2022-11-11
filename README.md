@@ -454,3 +454,22 @@ btn.addEventListener("click", function() {
 })
 ```
 
+
+
+### 静态资源部署
+
+创建json_server_config.json文件
+
+运行：`json_server --watch db.json json_server_config.json`
+
+```json
+{
+  "port":"3001",
+  "watch":true, // 开启后修改db.json数据不需要重启服务器
+  "static":"./public", //可以放图片 访问http://localhost/image/1.jpg
+  "read-only":false,
+  "no-cors":false,
+  "no-gzip":false
+}
+```
+
